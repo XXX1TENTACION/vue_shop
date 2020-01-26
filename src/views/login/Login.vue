@@ -65,12 +65,13 @@ export default {
     //表单预验证
     loginClick(){
       this.$refs.formDataRef.validate(async (valid) => {
+        // 判断用户名和密码是否符合要求
         if(!valid) return
         let { data:res } = await getLoginData(this.formData)
+        // 判断数据库中是否存在该用户
         if(res.meta.status !== 200) return this.$message.error('登录失败')
         this.$message.success('登陆成功')
         // 将token存在sessionStorage中
-        // console.log(res)
         window.sessionStorage.setItem('token',res.data.token)
         // 路由跳转到home页面
         this.$router.push('/home')

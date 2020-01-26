@@ -51,3 +51,50 @@ export function deleteUser(id){
     url:`users/${id}`
   })
 }
+
+// 请求权限列表数据
+export function getPowerlist(){
+  return request({
+    url:'rights/list'
+  })
+}
+
+// 角色列表
+export function getRolesList(){
+  return request({
+    url:'roles'
+  })
+}
+
+// 添加角色
+export function addRole(data){
+  // console.log(data.roleName)
+  return request({
+    url:'roles',
+    method:'post',
+    data:{
+      roleName: data.roleName,
+      roleDesc: data.roleDesc
+    }
+  })
+}
+
+// 修改角色
+export function editRole(roleInfo){
+  return request({
+    method:'put',
+    url:`roles/${roleInfo.id}`,
+    data:{
+      roleName: roleInfo.roleName,
+      roleDesc: roleInfo.roleDesc
+    }
+  })
+}
+
+// 删除角色
+export function deleteRole(id){
+  return request({
+    url:`roles/${id}`,
+    method:'delete'
+  })
+}

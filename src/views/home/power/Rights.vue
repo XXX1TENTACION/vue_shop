@@ -44,7 +44,7 @@ export default {
   },
   methods:{
     async getPowerData(){
-      let { data:res } = await getPowerlist()
+      let { data:res } = await getPowerlist('list')
       if(res.meta.status !== 200) return
       this.powerList = res.data
       // console.log(res)

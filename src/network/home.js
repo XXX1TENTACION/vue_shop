@@ -53,9 +53,9 @@ export function deleteUser(id){
 }
 
 // 请求权限列表数据
-export function getPowerlist(){
+export function getPowerlist(type){
   return request({
-    url:'rights/list'
+    url:'rights/'+type
   })
 }
 
@@ -97,4 +97,34 @@ export function deleteRole(id){
     url:`roles/${id}`,
     method:'delete'
   })
+}
+
+// 删除权限
+export function deleteRoleById(roleId,id){
+  return request({
+    url:`roles/${roleId}/rights/${id}`,
+    method:'delete'
+  })
+}
+
+// 角色授权
+export function setRole(roleId,idStr){
+  return request({
+    url:`roles/${roleId}/rights`,
+    method:'post',
+    data:{
+      rids:idStr
+    }
+  })
+}
+
+// 分配角色
+export function roleAdd(userId,roleID){
+  return request({
+    url:`users/${userId}/role`,
+    method:'put',
+    data:{
+      rid:roleID
+    }
+  }) 
 }

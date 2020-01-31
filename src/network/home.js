@@ -128,3 +128,102 @@ export function roleAdd(userId,roleID){
     }
   }) 
 }
+
+// 获取商品分类数据
+export function getCateDate(params){
+  return request({
+    url:'categories',
+    params
+  })
+}
+
+// 获取父级分类的列表数据
+export function getParentCateList(){
+  return request({
+    url:'categories',
+    params:{
+      type:2
+    }
+  })
+}
+
+// 添加分类
+export function addCate(data){
+  return request({
+    url:'categories',
+    method:'post',
+    data:{
+      cat_pid:data.cat_pid,
+      cat_name:data.cat_name,
+      cat_level:data.cat_level
+    }
+  })
+}
+
+//获取参数列表数据
+export function getParams(id,sel){
+  return request({
+    url:`categories/${ id }/attributes`,
+    params:{
+      sel:sel
+    }
+  })
+}
+
+// 添加动态与静态数据
+export function addPara(id,data){
+  return request({
+    url:`categories/${id}/attributes`,
+    method:'post',
+    data
+  })
+}
+
+// 修改动态与静态参数
+export function editPara(cateId,id,data){
+  return request({
+    url:`categories/${cateId}/attributes/${id}`,
+    method:'put',
+    data
+  })
+}
+
+// 删除动态与静态参数
+export function deletePara(cateId,id){
+  return request({
+    method:'delete',
+    url:`categories/${cateId}/attributes/${id}`
+  })
+}
+
+export function upDate(cateId,id,data){
+  return request({
+    url:`categories/${cateId}/attributes/${id}`,
+    method:'put',
+    data
+  })
+}
+// 获取商品数据
+export function getGoodsList(params){
+  return request({
+    url:'goods',
+    params
+  })
+}
+
+// 删除商品
+export function deleteGoods(id){
+  return request({
+    url:`goods/${id}`,
+    method:'delete'
+  })
+}
+
+// 添加商品
+export function addGoods(data){
+  return request({
+    url:'goods',
+    method:'post',
+    data
+  })
+}

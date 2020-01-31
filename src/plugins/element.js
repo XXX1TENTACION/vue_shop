@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Select,Option,Tree,Tag,MessageBox,Button,Form,FormItem,Input,Message,Container,Header,Aside,Main,Menu,MenuItem,Submenu,Breadcrumb,BreadcrumbItem,Card,Row,Col,Table,TableColumn,Switch,Tooltip,Pagination,Dialog  } from 'element-ui'
+import { Upload,CheckboxGroup,Checkbox,Steps,Step,Tabs,TabPane,Alert,Cascader,Select,Option,Tree,Tag,MessageBox,Button,Form,FormItem,Input,Message,Container,Header,Aside,Main,Menu,MenuItem,Submenu,Breadcrumb,BreadcrumbItem,Card,Row,Col,Table,TableColumn,Switch,Tooltip,Pagination,Dialog  } from 'element-ui'
 
 Vue.use(Button)
 Vue.use(Form)
@@ -27,6 +27,15 @@ Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Steps)
+Vue.use(Step)
+Vue.use(CheckboxGroup)
+Vue.use(Checkbox)
+Vue.use(Upload)
 // 挂载弹框组件
 Vue.prototype.$message = Message
 

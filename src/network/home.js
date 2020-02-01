@@ -227,3 +227,18 @@ export function addGoods(data){
     data
   })
 }
+
+// 订单数据
+export function getOrderList(params){
+  return request({
+    url:'orders',
+    params
+  })
+}
+
+// 物流查询
+export function deliver(){
+  return request({
+    url:'/kuaidi/1106975712662'
+  })
+}

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Upload,CheckboxGroup,Checkbox,Steps,Step,Tabs,TabPane,Alert,Cascader,Select,Option,Tree,Tag,MessageBox,Button,Form,FormItem,Input,Message,Container,Header,Aside,Main,Menu,MenuItem,Submenu,Breadcrumb,BreadcrumbItem,Card,Row,Col,Table,TableColumn,Switch,Tooltip,Pagination,Dialog  } from 'element-ui'
+import { Timeline,timelineItem,Upload,CheckboxGroup,Checkbox,Steps,Step,Tabs,TabPane,Alert,Cascader,Select,Option,Tree,Tag,MessageBox,Button,Form,FormItem,Input,Message,Container,Header,Aside,Main,Menu,MenuItem,Submenu,Breadcrumb,BreadcrumbItem,Card,Row,Col,Table,TableColumn,Switch,Tooltip,Pagination,Dialog  } from 'element-ui'
 
 Vue.use(Button)
 Vue.use(Form)
@@ -36,6 +36,8 @@ Vue.use(Step)
 Vue.use(CheckboxGroup)
 Vue.use(Checkbox)
 Vue.use(Upload)
+Vue.use(Timeline)
+Vue.use(timelineItem)
 // 挂载弹框组件
 Vue.prototype.$message = Message
 

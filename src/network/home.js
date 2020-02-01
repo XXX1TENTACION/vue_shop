@@ -242,3 +242,10 @@ export function deliver(){
     url:'/kuaidi/1106975712662'
   })
 }
+
+// 数据报表
+export function echartsData(){
+  return request({
+    url: 'reports/type/1'
+  })
+}
